@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color:#EEEEEE ;
+        }
+        #twocontainer {
+            /* width: 960px; */
+            width: 63%;
+            margin: auto;
+            height: 400px;
+            border: 1px solid red;
+            display: flex;
+            gap: 10px
+        }
+
+        #item_append {
+            width: 61%;
+            height: 400px;
+            border: 1px solid red;
+        }
+
+        #total_container {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 33.35%;
+            height: 400px;
+            border: 1px solid red;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border-radius: 10px;
+
+            padding: 20px;
+            margin-left: 10px;
+            height: 430px;
+            border: 1px solid red;
+            background-color: #FFFFFF;
+        }
+
+        /* total container css */
+        #Apply {
+            padding: 8px 13px 8px 13px;
+            border-radius: 10px;
+            color: #999999;
+            font-weight: bolder;
+            background-color: white;
+            border-color: green;
+            border: 1px solid green;
+            color: green;
+
+        }
+
+        #Apply:hover {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        #promo {
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid gray;
+            font-weight: bolder;
+        }
+
+        #hovertorow:hover {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+
+        }
+
+        #hovertorow:focus {
+            box-shadow: rgba(0, 0, 0, 1) 0px 0px 0px 1px;
+        }
+
+        #disc {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -20px;
+             
+        }
+
+        #realp {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -20px
+        }
+
+        #discount {
+            font-weight: 400;
+            font-size: 16px;
+            color: green;
+
+        }
+
+        #paradis {
+            font-size: 13px;
+        }
+
+        #checkout {
+            width: 100%;
+            height: 45px;
+            margin-top: 20px;
+            background-color: green;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-weight: bolder;
+
+        }
+
+        #checkout:hover {
+            background-color: rgb(97, 195, 163);
+            cursor: pointer;
+        }
+
+        #acceptpay {
+            width: 100%;
+            height: auto;
+            margin-top: -15px;
+
+        }
+
+        #acceptpay>img {
+            width: 100%;
+            height: auto;
+
+
+        }
+
+        #paradis {
+            font-size: 13.6px;
+            margin-top: 3px;
+        }
+
+        #price_flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #coupon_flex {
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        /* end total container css */
+        #first_box{
+            height: 70px;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #FFFFFF;
+            margin-bottom: 10px;
+                 
+        }
+        #first_box>h1{
+            font-size: 20px;
+            margin-left: 20px;
+            font-weight: bolder;
+        }
+        #first_box>p{
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="twocontainer">
+        <div id='item_append'>
+            <div id = "first_box">
+               <h1>MY BAG</h1>
+               <p>Items are reserved for 60 mintues</p>
+            </div>
+        </div>
+        <div id="total_container">
+            <div id="totalcontainer">
+                <h2>TOTAL</h2>
+                <hr>
+                <div id="price_flex">
+                    <h4>Sub-total :</h4>
+                    <h3 id="total-p"></h3>
+
+                </div>
+                <div id="disc">
+                    <h4 id="discoun"></h4>
+                    <h3 id="discount"></h3>
+                </div>
+
+                <div id="realp">
+                    <h3 id="realprice"></h3>
+                    <h3 id="totalr"></h3>
+
+                </div>
+                <div id="coupon_flex">
+                    <input id="promo" type="text" placeholder="Apply Promo">
+                    <button id="Apply">Apply</button>
+                </div>
+                <hr>
+                <a href="payment.html"><button id=checkout>PAY NOW</button></a>
+                <h4>WE ACCEPT</h4>
+                <div id="acceptpay">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPObq3geMYUM5tBp5bYZ4ellfEFNHuYVk-E4xVXTFOC8m2iNyjRIPwpwaKAhSt7dF9kA&usqp=CAU" />
+
+                </div>
+                <p id=paradis>Got a discount code? Add it in the next step</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src = "intex.js">
+
+</script>
