@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #EEEEEE
+    }
+
+    #three {
+        width: 62.5%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+
+
+    }
+
+    #three>#dig {
+        height: 35px;
+        margin-right: 23px;
+    }
+
+    #three>div>img {
+        height: 100%;
+
+    }
+
+    #logo {
+        height: 100%;
+        height: 30px;
+        margin-left: 23px;
+    }
+
+    #logo>img {
+        height: 100%;
+    }
+
+    #three>div>h1 {
+        font-size: 28px;
+    }
+
+    #maincontainer {
+
+        width: 62.5%;
+        margin: auto;
+        display: flex;
+
+        gap: 15px;
+
+    }
+
+    .bigcontainer {
+        width: 60.5%;
+
+
+    }
+
+    .smallcontainer {
+
+        background-color: #FFFFFF;
+        height: 610px;
+
+        width: 38%;
+    }
+
+    div.smallcontainer {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        font-size: 20px;
+    }
+
+
+
+    .first {
+        color: #2D2D2D;
+        letter-spacing: 2px;
+        height: 112px;
+        width: 90%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        padding: 8px 27.5px 0px 27.5px;
+        margin-bottom: 15px;
+        background-color: #FFFFFF;
+    }
+
+    .first>div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -10px;
+    }
+
+    .first>div>div>div {
+        display: flex;
+
+        gap: 10px;
+    }
+
+    .change {
+        display: flex;
+        align-items: center;
+        padding: 8px 15px 8px 15px;
+
+        background-color: #EEEEEE;
+        font-weight: bolder;
+
+    }
+
+    .flagbox {
+        height: 40px;
+    }
+
+    .twothing {
+        display: flex;
+
+        gap: 10px;
+    }
+
+    .address {
+
+        width: 90%;
+        margin: auto;
+        letter-spacing: 2px;
+        padding: 10px 26px 0px 26px;
+        background-color: #FFFFFF;
+
+
+
+    }
+
+    form {
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    label {
+        font-weight: bolder;
+        font-size: 14px;
+        color: #999999;
+        letter-spacing: 2px;
+
+    }
+
+    input {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        padding: 11px 128px 11px 11px;
+    }
+
+    select {
+        margin-bottom: 20px;
+        margin-top: 5px;
+        padding: 11px 0px 11px 0px;
+    }
+
+    /* checkbox */
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    /* Hide the browser's default checkbox */
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+
+        border-radius: 40px;
+
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked~.checkmark {
+        background-color: #2196F3;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked~.checkmark:after {
+        display: block;
+
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+    }
+
+    .imgcard>img {
+        height: 35px;
+    }
+
+    .box {
+        box-shadow: rgba(0, 0, 0, 0.01) 0px 6px 24px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+        width: 60%;
+        padding: 15px 0px 31px 0px;
+        height: 20px;
+        margin-left: 50px;
+
+
+    }
+
+    .secbox {
+        height: 20px;
+        padding: 0px;
+        padding: 13px 0px 25px 0px;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        color: #2D2D2D;
+    }
+
+    .or {
+        width: 60%;
+        text-align: center;
+        color: #999999
+    }
+
+    .weaccept {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+
+        margin-left: -25px;
+        padding: 15px 10px 15px 40px;
+        background-color: #F9F9F9;
+        margin-bottom: 20px;
+    }
+
+    .weaccept>h3 {
+        font-size: 14px;
+        color: #999999
+    }
+
+    .weaccept>img {
+        height: 25px
+    }
+
+    /* button  */
+    .button {
+
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 18px;
+        letter-spacing: 2px;
+        border-radius: 10px;
+        height: 55px;
+
+
+    }
+
+    .btn {
+        text-decoration: none;
+
+        /* background-color: aqua; */
+        position: relative;
+    }
+
+    .btn {
+        overflow: hidden;
+        height: 55px;
+        display: flex;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+        box-shadow: 0 0 0 0 rgba(64, 245, 248, 0.5), 0 0 0 0 rgba(39, 255, 143, 0.5);
+        transition: transform 0.3 ease, box shadow 0.3s ease;
+    }
+
+    .btn::after {
+        content: "";
+        width: 600px;
+        height: 180px;
+        top: -50px;
+        left: -100px;
+        position: absolute;
+        background-color: #ff3cac;
+        background-image: linear-gradient(225deg, #27d86c 10%, #26caf8 50%, #c625d0 100%);
+        z-index: -1;
+        transition: transform 0.5s ease;
+    }
+
+    .btn:hover {
+        transform: translate(0, -6px);
+        box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5), -10px -10px 25px 0 rgba(39, 200, 255, 0.5);
+
+    }
+
+    .btn:hover::after {
+        transform: rotate(150deg);
+    }
+
+
+
+    #checkout {
+        width: 80%;
+        display: block;
+        margin: auto;
+        height: 45px;
+        margin-top: 20px;
+        background-color: green;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-weight: bolder;
+
+    }
+
+    #checkout:hover {
+        background-color: rgb(97, 195, 163);
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div id="nav">
+        <div id="three">
+            <div id='logo'><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Asos.svg/1280px-Asos.svg.png"></div>
+            <div>
+                <h1>CHECKOUT</h1>
+            </div>
+            <div id="dig"><img
+                    src="data:image/png;base64,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">
+            </div>
+        </div>
+    </div>
+    <div id='maincontainer'>
+        <div class='bigcontainer'>
+            <div class="first">
+                <h3>DELIVERY COUNTRY:</h3>
+                <div>
+                    <div class="twothing">
+                        <div class="flagbox">
+                            <img
+                                src="https://media.istockphoto.com/vectors/india-flag-vector-id1165087486?k=20&m=1165087486&s=612x612&w=0&h=7qFDAgS8Tcsq-58mV4QcmK7lLxTsA4qLM-juiil0Ifc=">
+
+                        </div>
+                        <p>India</p>
+                    </div>
+
+                    <div class='change'>CHANGE</div>
+                </div>
+            </div>
+
+            <div class='address'>
+                <h3>DELIVERY ADDRESS</h3>
+                <form>
+                    <label>FIRST NAME :</label><br>
+                    <input><br>
+                    <label>LAST NAME :</label><br>
+                    <input><br>
+                    <label>MOBILE :</label><br>
+                    <input><br>
+                    <label>COUNTRY :</label><br>
+                    <select>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Anguilla">Anguilla</option>
+                        <option value="Antartica">Antarctica</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Bouvet Island">Bouvet Island</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                        <option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option>
+                        <option value="Cayman Islands">Cayman Islands</option>
+                        <option value="Central African Republic">Central African Republic</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Christmas Island">Christmas Island</option>
+                        <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo">Congo</option>
+                        <option value="Congo">Congo, the Democratic Republic of the</option>
+                        <option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+                        <option value="Croatia">Croatia (Hrvatska)</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="East Timor">East Timor</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
+                        <option value="Faroe Islands">Faroe Islands</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="France Metropolitan">France, Metropolitan</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">French Polynesia</option>
+                        <option value="French Southern Territories">French Southern Territories</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Gibraltar">Gibraltar</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guinea-Bissau">Guinea-Bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
+                        <option value="Holy See">Holy See (Vatican City State)</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India" selected>India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran">Iran (Islamic Republic of)</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Democratic People's Republic of Korea">Korea, Democratic People's Republic of
+                        </option>
+                        <option value="Korea">Korea, Republic of</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao">Lao People's Democratic Republic</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Macau">Macau</option>
+                        <option value="Macedonia">Macedonia, The Former Yugoslav Republic of</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marshall Islands">Marshall Islands</option>
+                        <option value="Martinique">Martinique</option>
+                        <option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mayotte">Mayotte</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Micronesia">Micronesia, Federated States of</option>
+                        <option value="Moldova">Moldova, Republic of</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Netherlands Antilles">Netherlands Antilles</option>
+                        <option value="New Caledonia">New Caledonia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niue">Niue</option>
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Pitcairn">Pitcairn</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Reunion">Reunion</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russia">Russian Federation</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                        <option value="Saint LUCIA">Saint LUCIA</option>
+                        <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Slovakia">Slovakia (Slovak Republic)</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Georgia">South Georgia and the South Sandwich Islands</option>
+                        <option value="Span">Spain</option>
+                        <option value="SriLanka">Sri Lanka</option>
+                        <option value="St. Helena">St. Helena</option>
+                        <option value="St. Pierre and Miguelon">St. Pierre and Miquelon</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Svalbard">Svalbard and Jan Mayen Islands</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syria">Syrian Arab Republic</option>
+                        <option value="Taiwan">Taiwan, Province of China</option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Tanzania">Tanzania, United Republic of</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tokelau">Tokelau</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Turks and Caicos">Turks and Caicos Islands</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands
+                        </option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Vietnam">Viet Nam</option>
+                        <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                        <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)</option>
+                        <option value="Wallis and Futana Islands">Wallis and Futuna Islands</option>
+                        <option value="Western Sahara">Western Sahara</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select><br>
+                    <label>ADDRESS :</label><br>
+                    <input><br>
+                    <input placeholder="Optional"><br>
+
+                </form>
+                <label>CITY :</label><br>
+                <input><br>
+                <label>COUNITY :</label><br>
+                <input placeholder="Optional"><br>
+
+                <label>POSTCODE :</label><br>
+                <input><br>
+                <hr>
+                <div class="payment">
+                    <h3>PAYMENT TYPE</h3>
+
+                    <div class='box'>
+                        <label class="container">
+                            <div class="imgcard"><img
+                                    src="data:image/png;base64,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">
+                            </div>
+                            ADD CREDIT/DEBIT CARD
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <div></div>
+                        </label>
+                    </div>
+                    <div class="or">
+                        <h3>OR</h3>
+                    </div>
+
+                    <div class='box secbox'>
+                        <label class="container">
+                            <div class="imgcard"><img
+                                    src="data:image/png;base64,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">
+                            </div>
+                            PAYPAL
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class='weaccept'>
+                    <h3>WE ACCEPT :</h3>
+                    <img src="https://assets.asosservices.com/asos-finance/images/marketing/single.png">
+                </div>
+            </div>
+            <div class="button">
+                <a href="index.html" class="btn">PLACE ORDER</a>
+            </div>
+        </div>
+
+
+        <div class='smallcontainer'>
+            <div class="items">
+                <div class="second">
+                    <h3>1 ITEM</h3>
+                    <p>Edit</p>
+                </div>
+                <hr>
+                <!-- here will product details -->
+                <div class="checkoutdata">
+
+                </div>
+                <hr>
+                <div class='subtotal'>
+                    <div>
+                        <p>Subtotal</p>
+                    </div>
+                    <div class = "subv">
+                        <p></p>
+                    </div>
+
+                </div>
+                <div class='delivery'>
+                    <div>
+                        <p>Delivery</p>
+                    </div>
+                    <div>
+                        <p class = 'deli'></p>
+                    </div>
+                </div>
+                <div class="total">
+                    <div>
+                        <h3>TOTAL TO PAY</h3>
+                    </div>
+                    <div>
+                        <h3 class = "tot">6.00</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class='last'>
+                <div>
+                    <h4><span>ⓘ</span>FREE STANDARD DELIVERY TO INDIA WHEN YOU SPEND OVER £35.00</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+    span {
+        font-size: 18px;
+        margin-left: -30px;
+        margin-right: 10px;
+    }
+
+    .last>div>h4 {
+        margin-left: 30px;
+    }
+
+    .last {
+        width: 100%;
+        padding: 0.1px;
+        font-size: 14px;
+        background-color: #CDE2F5;
+
+    }
+
+    .smallcontainer {
+        letter-spacing: 2px;
+    }
+
+    .last>div {
+        width: 84%;
+        margin: auto;
+        letter-spacing: 2px;
+        line-height: 23px;
+    }
+
+    .second {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 2px;
+    }
+
+    .subtotal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+
+    }
+
+    .delivery {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        margin-top: -10px;
+    }
+
+    .total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -10px;
+        font-size: 14px;
+    }
+
+
+    .items {
+
+        width: 85%;
+        margin: auto;
+
+    }
+
+    .card {
+        display: flex;
+        gap: 15px;
+        /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+        padding: 10px 0px 10px 0px;
+    }
+
+    .checkoutdata {
+        margin-top: 20px;
+        height: 264.5px;
+        overflow: scroll;
+        margin-bottom: 20px;
+        scrollbar-width: none;
+        scrollbar-width: thin;
+        scrollbar-color: #999 #333;
+
+    }
+
+
+    /* .checkoutdata::-webkit-scrollbar{
+           /* width: 10px ;
+           height: 10px; */
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+</style>
+
+</html>
+<script src="payment.js">
+
+</script>
