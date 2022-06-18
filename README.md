@@ -14,7 +14,7 @@ We have made this project in 5 days.
 -Login and signin page
 -Sorting for price 
 -Add to cart opt for adding items
--Increment and Decrement Number of person according to that price is also changes
+-Increment and Decrement Number of product according to that price is also changes
 -Discount price after applying coupon.
 
 # Challenges we face during Construct week
