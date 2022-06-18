@@ -1,0 +1,36 @@
+#footer{
+    height: 280px;
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #EEEEEE;
+    padding-top: 40px;
+}
+.f1{
+    color: #666666;
+    font-family: futura-pt,FuturaStd,Helvetica,Arial,sans-serif;
+ font-size: 14px;
+font-weight: bold;
+letter-spacing: 2.2px;
+margin-right: 70px;
+}
+.f2{
+    color: #666666;
+    font-family: futura-pt,FuturaStd,Helvetica,Arial,sans-serif;
+ font-size: 14px;
+ margin-top:20px ;
+}
+.f2:hover{
+    color: blue;
+    cursor: pointer;
+}
+#country{
+    display: flex;
+}
+#flag{
+    height: 30px;
+    width: 30px;
+    margin-top: 12px;
+    margin-left: 12px;
+}
