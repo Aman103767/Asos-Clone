@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/addcart.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar__container"> </div>
+<div id = "alldiv">
+   <div id="allOver">
+    
+        <div class="img-container">
+            <img  id="imageBox" src="" alt="">
+        </div>
+     </div>
+
+     <div class="col">
+
+        <div class="content">
+   
+            <h1 id="hed"></h1>
+            <h2 id="price"> </h2>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <p id="ret">3 </p>
+                <p id="ret">(13) </p>
+            </div>
+            <div id="box">
+             <img id="icon" src="https://cdn-icons-png.flaticon.com/512/633/633756.png" alt="">
+                <div id="para">
+                    <p>NEW HERE?</p>
+                    <p>Get 15% off almost everything*</p>
+                    <p>With code: HIFRIEND</p>
+                </div>
+            </div>
+            <p class="color">COLOUR: WHITE</p>
+            <p id="size">Size:   </p>
+            <p id="para2"><a href="#">Find your Fit Assistant size </a>	</p>
+            <select name="size" id="select">
+
+                    <option value="select size">Please Select</option>
+                    <option value="AU6">AU4</option>
+                    <option value="AU6">AU6</option>
+                    <option value="AU8">AU8</option>
+                    <option value="AU10">AU10</option>
+                    <option value="AU12">AU12</option>
+                    <option value="AU14">AU14</option>
+                    <option value="AU16">AU16</option>
+                    <option value="AU18">AU18</option>
+
+                </select>
+                <div id="btn">
+            <button type="button" id="btn1"> ADD TO  BAG</button>
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtNzUyIDM3NmMwIDEzNC4zMy03MS42NjQgMjU4LjQ2LTE4OCAzMjUuNjItMTE2LjM0IDY3LjE2OC0yNTkuNjYgNjcuMTY4LTM3NiAwLTExNi4zNC02Ny4xNjQtMTg4LTE5MS4yOS0xODgtMzI1LjYyczcxLjY2NC0yNTguNDYgMTg4LTMyNS42MmMxMTYuMzQtNjcuMTY4IDI1OS42Ni02Ny4xNjggMzc2IDAgMTE2LjM0IDY3LjE2NCAxODggMTkxLjI5IDE4OCAzMjUuNjIiIGZpbGw9IiNkMmQyZDIiLz4KICA8cGF0aCBkPSJtMzc2LjI3IDU1Ni41Yy0wLjE3OTY5IDAuMDAzOTA2LTAuMzU1NDcgMC4wMDM5MDYtMC41MzUxNiAwLTIuMDQ2OSAwLTQuMTE3Mi0wLjYwOTM4LTUuOTE0MS0xLjg5MDYtNS42Nzk3LTQuMDMxMi0xMzkuNzEtOTkuNjMzLTE4OS4xLTE4MC4yOC0wLjA2NjQwNi0wLjEwOTM4LTAuMTI4OTEtMC4yMTg3NS0wLjE5NTMxLTAuMzI4MTItMTEuMDItMTguMjgxLTE2Ljg0NC0zOS4yNy0xNi44NDQtNjAuNzI3IDAtNjQuOTM4IDUyLjgzMi0xMTcuNzcgMTE3Ljc3LTExNy43NyAzNy41OTggMCA3Mi41MTIgMTcuODYzIDk0LjU1MSA0Ny41MzUgMjIuMDM5LTI5LjY2OCA1Ni45NTctNDcuNTM1IDk0LjU1MS00Ny41MzUgNjQuOTM4IDAgMTE3Ljc3IDUyLjgzMiAxMTcuNzcgMTE3Ljc3IDAgMjEuNDU3LTUuODI0MiA0Mi40NDUtMTYuODQ0IDYwLjcyNy0wLjA2MjUgMC4xMDkzOC0wLjEyNSAwLjIxODc1LTAuMTk1MzEgMC4zMjgxMi00OS4zNzkgODAuNjQ1LTE4My40MiAxNzYuMjUtMTg5LjEgMTgwLjI4LTEuNzg5MSAxLjI4MTItMy44NTk0IDEuODkwNi01LjkxMDIgMS44OTA2em0tMTc3LjkxLTE5Mi41OGM0MS43NjIgNjcuOTQxIDE1MS40NSAxNTAuNjcgMTc3LjY0IDE2OS44OCAyNi4xOTktMTkuMjE1IDEzNS44OC0xMDEuOTQgMTc3LjY0LTE2OS44OCAwLjA0Njg3NS0wLjA3NDIxOSAwLjA5Mzc1LTAuMTU2MjUgMC4xNDA2Mi0wLjIzODI4IDkuMTk1My0xNS4xNDggMTQuMDYyLTMyLjU3OCAxNC4wNjItNTAuNDA2IDAtNTMuNjQ4LTQzLjY0NS05Ny4yODktOTcuMjg5LTk3LjI4OS0zNS43MDcgMC02OC40ODggMTkuNTEyLTg1LjU1MSA1MC45MjYtMS43ODkxIDMuMzAwOC01LjI0NjEgNS4zNTE2LTguOTk2MSA1LjM1MTZzLTcuMjA3LTIuMDUwOC04Ljk5NjEtNS4zNTE2Yy0xNy4wNjItMzEuNDE0LTQ5Ljg0NC01MC45MjYtODUuNTUxLTUwLjkyNi01My42NDggMC05Ny4yODkgNDMuNjQ1LTk3LjI4OSA5Ny4yODkgMCAxNy44MzIgNC44NTk0IDM1LjI1OCAxNC4wNjIgNTAuNDA2IDAuMDMxMjUgMC4wNzgxMjQgMC4wNzgxMjUgMC4xNjAxNiAwLjEyNSAwLjIzNDM3eiIvPgogPC9nPgo8L3N2Zz4K" alt="">
+        </div>
+  <div id="delivery">
+    <div id="smallbox">
+       <img src="https://cdn-icons-png.flaticon.com/512/1670/1670965.png" alt="">
+     <p>Free Delivery.</p>
+    </div>
+    <div id="smallbox">
+        <img src="https://as2.ftcdn.net/v2/jpg/03/06/20/25/1000_F_306202572_jHBJxgeaolkgKdw04XbfA9V7wIeAK49t.jpg" alt="">
+       <p>Free Returns.</p>
+    </div>
+    <div id="smallbox">
+    <p id="Ts">Ts&Cs apply.     </p>
+   <p><a href="#">Learn more</a> </p>
+</div>
+  </div>
+<div id="info">
+    <h3>SIZING HELP</h3>
+    <p>Still unsure what size to get?</p>
+    <p><a href="#">Find your recommended size</a> or check out our</p>
+    <p><a href="#">size guide.</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="box2">
+    <div id="div1">
+        <h1>PRODUCT DETAILS</h1>
+        <p><a href="#">Mini dress </a>by <a href="#">ASOS DESIGN</a></p>
+        <ul>
+            <li>File under: prints</li>
+            <li>V-neck </li>
+            <li>Puffed sleeves</li>
+            <li>Tiered skirt</li>
+            <li>Relaxed fit</li>
+        </ul>
+    </div>
+    <div id="div2">
+        <h1>PRODUCT CODE</h1>
+        <p>115601658</p>
+        <h1>BRAND</h1>
+        <p>This is <a href="#">ASOS DESIGN</a>  – your go-to for all the
+             latest trends, no matter who you are, where you’re from
+              and what you’re up to. Exclusive to ASOS, our universal brand 
+              is here for you and comes in all our fit 
+            ranges: ASOS Curve, Tall, Petite and Maternity. Created by
+             us, styled by you.</p>
+    </div>
+    <div id="div3">
+        <h1>SIZE & FIT</h1>
+        <p>Model wears: UK 8/ EU 36/ US 4
+            Model's height: 168cm/5'6"</p>
+
+            <h1>LOOK AFTER ME</h1>
+            <p>Machine wash according to instructions on the care label.</p>
+            <h1>ABOUT ME</h1>
+            <p>Lightweight cotton
+                Soft, strong and breathable</p>
+                <p>Main: 100% Cotton.</p>
+    </div>
+</div>
+<div class="line"></div>
+<div id="badacontainer">
+
+<h1 id="hed2">YOU MIGHT ALSO LIKE</h1>
+<div id="chotediv">
+<div>
+    <img   src="https://images.asos-media.com/products/asos-design-crochet-tiered-babydoll-mini-dress-in-mixed-print/202081127-1-mixedprint?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$64.00</h1>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-mini-smock-dress-with-godets-and-flared-sleeves-in-swirl-print/201450797-1-swirlprint?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$80.00</h1>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/miss-selfridge-poplin-wrap-smock-dress-in-oversized-painted-floral/201540115-1-beige?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1 id="red">$33.60 (-44%)</h1>
+    <p><del>RRP $60.00</del></p>
+    <p>I Saw It First</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/i-saw-it-first-polka-dot-smock-dress-in-monochrome/200914580-1-multi?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$66.00</h1>
+    <p>Miss Selfridge</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-soft-denim-ruffle-sleeve-babydoll-dress-in-washed-black/201610023-1-washedblack?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$56.00</h1>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/influence-shirt-dress-with-contrast-collar-in-black-gingham/23897611-1-blackwhite?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1 id="red">$44.00(-31%)</h1>
+    <p><del>RRP $64.00</del></p>
+    <p>Influence</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/miss-selfridge-tiered-babydoll-mini-dress-in-floral/24428817-1-black?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$56.00</h1>
+    <p>Miss Selfridge</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/topshop-mix-and-match-floral-print-tie-back-mini-tea-dress-in-pink-and-black/201310571-1-multi?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$90.00</h1>
+    <p>Topshop</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/influence-bow-tie-strap-cami-mini-dress-in-mixed-floral/201737542-1-multi?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1 id="red">$36.00(-25%)</h1>
+    <p><del>RRP $48.00  </del></p>
+    <p>Influence</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-babydoll-mini-dress-in-jacquard-in-black/201330958-1-black?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$96.00</h1>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-bubble-mini-dress-in-pop-floral/201202805-1-multi?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$80.00</h1>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-lace-insert-mini-smock-dress-in-floral-print/200932264-1-floralprint?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1 id="red">$53.20(-30%)</h1>
+    <p><del>$76.00 </del></p>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-bonded-cotton-poplin-skater-mini-dress-in-dark-based-floral-print/201400500-1-darkbasedfloral?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$84.00</h1>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-oversized-mini-smock-dress-with-dropped-waist-in-rose/22703274-1-rose?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1 id="red">$18.00(-50%)</h1>
+    <p><del>$36.00 </del></p>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/miss-selfridge-poplin-wrap-smock-dress-in-bright-cluster-floral/201540113-1-multi?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$66.00</h1>
+    <p>Miss Selfridge</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/the-frolic-floral-gingham-mini-swing-dress-in-multi/201882601-1-floralgingham?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$64.00</h1>
+    <p>The Frolic</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/topshop-recycled-broderie-ruffle-neck-chuck-on-dress-in-white/201278872-1-white?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$100.00</h1>
+    <p>Topshop</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/collusion-oversized-gingham-mini-smock-sundress-in-green-and-brown/23644410-1-greenandbrown?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1 id="red">$26.00(-49%)</h1>
+    <p><del>$51.99</del></p>
+    <p>Collusion</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-lace-insert-70s-mini-dress-with-tiered-skirt-in-cream/201237017-1-cream?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$100.00</h1>
+    <p>ASOS DESIGN</p>
+</div>
+<div>
+    <img src="https://images.asos-media.com/products/asos-design-mini-smock-dress-with-double-tie-detail-in-rose/201986104-1-rose?$n_240w$&wid=168&fit=constrain" alt="">
+    <h1>$36.00</h1>
+    <p>ASOS DESIGN</p>
+</div>
+</div>
+</div>
+<div class="line"></div>
+<div id="badadiv">
+    <div id="chotadiv1">
+        <h1>REVIEWS</h1>
+        <div class="rating1">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <p id="ret">4.5 </p>
+            <p id="ret">
+                (120 Reviews) </p>
+        </div>
+        <P>33% of customers recommend this product</P>
+        <h2>CUSTOMER RATING</h2>
+        <div id="fit">
+        <img src="https://cdn-icons-png.flaticon.com/512/1085/1085192.png" alt="">
+       <h1>FIT :</h1>
+    </div>
+    <div id="line1">
+        <div></div>
+    </div>
+    <div id="runs">
+        <p>Runs Small</p>
+        <p>Runs Large</p>
+    </div>
+    <div id="fit">
+        <img src="https://cdn-icons-png.flaticon.com/512/636/636600.png" alt="">
+       <h1>
+        QUALITY :</h1>
+    </div>
+    <div id="line1">
+        <div></div>
+    </div>
+    <div id="runs1">
+        <p>Poor</p>
+        <p>Great</p>
+    </div>
+
+    </div>
+    <div id="chotadiv2">
+        <h1>MOST RECENT REVIEW</h1>
+        <img src="https://static.thenounproject.com/png/435820-200.png" alt="">
+        <p id="p1">28 days ago</p>
+        <p id="p2">Verified Purchaser</p>
+        <h1 >GREAT ITEM!</h1>
+        <p  id="p3">It’s exactly how it looks! It’s a really nice piece of cloth. 
+            I <br>needed it for a christening and it was really what I was <br>looking for</p>
+    
+     <button  id="myBtn"><h1>VIEW ALL REVIEW</h1></button>
+     <div id="myModal" class="modal">
+
+ 
+        <div class="modal-content">
+            <span class="close">&times;</span>
+        <div id="nav"><h1>Reviews</h1></div>
+        <div class="rating2">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <h1 id="ret1">4.5 </h1>
+            <p id="ret2">
+                (120 Reviews)</p>
+               
+        </div>
+        <p id="ret3">32% of customers recommend this product</p>
+
+        <div class="line"></div>
+
+        <div class="star2">
+            <p>5 stars</p>
+            <div id="line2">
+              <div id="li1"></div>
+            </div>
+            <p>(25)</p>
+        </div>
+        <div class="star2">
+            <p>4 stars</p>
+            <div id="line2">
+              <div id="li2"></div>
+            </div>
+            <p>(16)</p>
+        </div>
+        <div class="star2">
+            <p>3 stars</p>
+            <div id="line2">
+              <div id="li3"></div>
+            </div>
+            <p>(15)</p>
+        </div>
+        <div class="star2">
+            <p>2 stars</p>
+            <div id="line2">
+              <div id="li4"></div>
+            </div>
+            <p>(17)</p>
+        </div>
+        <div class="star2">
+            <p>1 stars</p>
+            <div id="line2">
+              <div id="li5"></div>
+            </div>
+            <p>(51)</p>
+        </div>
+        <div class="line"></div>
+        <h2 id="customer">CUSTOMER RATING</h2>
+        <div id="fit">
+        <img src="https://cdn-icons-png.flaticon.com/512/1085/1085192.png" alt="">
+       <h1>FIT :</h1>
+    </div>
+    <div id="line1">
+        <div></div>
+    </div>
+    <div id="runs">
+        <p>Runs Small</p>
+        <p>Runs Large</p>
+    </div>
+    <div id="fit">
+        <img src="https://cdn-icons-png.flaticon.com/512/636/636600.png" alt="">
+       <h1>
+        QUALITY :</h1>
+    </div>
+    <div id="line1">
+        <div></div>
+    </div>
+    <div id="runs1">
+        <p>Poor</p>
+        <p>Great</p>
+    </div>
+
+    <div class="line7"></div>
+    <div id="rev1">
+        <div id="star4">
+           
+            <img id="img1" src="https://london-post.co.uk/wp-content/uploads/2018/11/4-of-5-stars-300x110.jpg" alt="">
+            <p>2 day ago</p>
+      
+        </div>
+        <p id="ver">Verified Purchaser</p>
+        <h1>CUTE</h1>
+        <p id="comment">Quality and design is exactly as shown, fabric feels expensive- only issue 
+             is the arms to run a little small and it’s a bit hard to walk in.</p>
+            
+    </div>
+  
+    <div class="line"></div>
+
+
+    <div id="rev1">
+        <div id="star4">
+           
+            <img id="img1" src="https://london-post.co.uk/wp-content/uploads/2018/11/4-of-5-stars-300x110.jpg" alt="">
+            <p>5 day ago</p>
+      
+        </div>
+        <p id="ver">Verified Purchaser</p>
+        <h1>FLATTERING STYLE POOR QUALITY</h1>
+        <p id="comment">sizing is way off, ordered my normal us 4 and was extremely small didn’t even zip up. seams need to be reinforced, 
+            one wrong move and the dress would definitely split.</p>
+            
+    </div>
+    <div class="line"></div>
+
+
+    <div id="rev1">
+        <div id="star4">
+           
+            <img id="img1" src="https://t3.ftcdn.net/jpg/03/11/19/68/360_F_311196810_y7YQLpBaAsaKrJoW3304dUTbRr4VY1SM.jpg" alt="">
+            <p>15 day ago</p>
+      
+        </div>
+        <p id="ver">Verified Purchaser</p>
+        <h1>GOT RANDOM FABRIC EVERYWHERE</h1>
+        <p id="comment">Quality of the fabric is good.
+             But has random bits of fabric everywhere and isn’t flattering.</p>       
+    </div>
+    </div>
+ </div>
+          </div>
+</div></div>
+<div id = 'footer'></div>
+</body>
+</html>
+<script type = "module"src="./js/addcart.js"></script>
