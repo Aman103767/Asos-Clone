@@ -1,93 +1,8 @@
-let cartarr = [
-   {
-       details: "ASOS LUXE co-ord satin bardot crop top with bow in floral print",
-       price: "£52.00",
-       image: "https://images.asos-media.com/products/asos-luxe-co-ord-satin-bardot-crop-top-with-bow-in-floral-print/201884267-1-multi?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "Daisy Street Y2K strappy butterfly crop top in grunge sequins",
-       price: "£37.00",
-       image: "https://images.asos-media.com/products/daisy-street-y2k-strappy-butterfly-crop-top-in-grunge-sequins/202324648-1-turquoisesequin?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "Daisy Street Y2K strappy butterfly crop top in grunge sequins",
-       price: "£37.00",
-       image: "https://images.asos-media.com/products/daisy-street-y2k-strappy-butterfly-crop-top-in-grunge-sequins/202324648-1-turquoisesequin?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "Miss Selfridge retro daisy kickflare co-ord",
-       price: "£18.99",
-       image: "https://images.asos-media.com/products/miss-selfridge-retro-daisy-kickflare-co-ord/201434367-1-multi?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "ASOS EDITION feather & sequin mini dress with low back in charcoal",
-       price: "£135.00",
-       image: "https://images.asos-media.com/products/asos-edition-feather-sequin-mini-dress-with-low-back-in-charcoal/20232354-1-charcoal?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "Trendyol mesh side dress in black",
-       price: "£29.00",
-       image: "https://images.asos-media.com/products/trendyol-mesh-side-dress-in-black/201644659-1-black?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "ASOS DESIGN textured lace beach trouser co ord in white",
-       price: "£32.00",
-       image: "https://images.asos-media.com/products/asos-design-textured-lace-beach-trouser-co-ord-in-white/201923162-1-white?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "ASOS DESIGN patchwork embellished mini dress with wrap skirt and drape back in textured sequin",
-       price: "£105.00",
-       image: "https://images.asos-media.com/products/asos-design-patchwork-embellished-mini-dress-with-wrap-skirt-and-drape-back-in-textured-sequin/200498723-1-bronze?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "ASOS DESIGN co-ord crochet off shoulder top in cream",
-       price: "£26.00",
-       image: "https://images.asos-media.com/products/asos-design-co-ord-crochet-off-shoulder-top-in-cream/202690907-1-cream?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "ASYOU mesh layer long sleeve mini dress in black",
-       price: "£28.99",
-       image: "https://images.asos-media.com/products/asyou-mesh-layer-long-sleeve-mini-dress-in-black/202649241-1-black?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "Style Cheat tiered smock dress in pink leopard print",
-       price: "£45.00",
-       image: "https://images.asos-media.com/products/style-cheat-tiered-smock-dress-in-pink-leopard-print/202626709-1-pinkanimalprint?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
+import navbar from "./navbar.js"
+document.querySelector(".navbar__container").innerHTML = navbar();
+import foot from "./footer.js"
+ document.getElementById('footer').innerHTML = foot();
 
-   },
-   {
-       details: "ASOS DESIGN shard sequin strappy mini dress in orange",
-       price: "£90.00",
-       image: "https://images.asos-media.com/products/asos-design-shard-sequin-strappy-mini-dress-in-orange/201593123-1-orange?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "ASOS LUXE co-ord 3D lace bardot crop top in black",
-       price: "£52.00",
-       image: "https://images.asos-media.com/products/asos-luxe-co-ord-3d-lace-bardot-crop-top-in-black/201306340-1-black?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-   },
-   {
-       details: "ASOS DESIGN mesh ruched midi dress with tie in animal and floral print",
-       price: "£34.00",
-       image: "https://images.asos-media.com/products/asos-design-mesh-ruched-midi-dress-with-tie-in-animal-and-floral-print/202023522-1-animalfloralprint?$n_480w$&wid=476&fit=constrain",
-       quantity: 1
-       
-   }
-   ]
-
-localStorage.setItem("cartdata", JSON.stringify(cartarr));
 let cartarray = JSON.parse(localStorage.getItem("cartdata"))||[];
 
 displayData(cartarray);
@@ -191,11 +106,13 @@ function incQuant(elem, index) {
    showTotal();
    
    displayData(cartarray);
+   shownavbar()
 }
 function decQuant(elem, index) {
    if (elem.quantity > 1) {
       document.querySelector("#qunt").innerText = elem.quantity--;
       // here we have to send data to local storage
+      localStorage.setItem("cartdata", JSON.stringify(cartarray));
       showTotal();
       
 
@@ -206,6 +123,8 @@ function decQuant(elem, index) {
    }
 
    displayData(cartarray)
+   shownavbar()
+
 }
 
 
@@ -274,6 +193,7 @@ function showTotal() {
             document.querySelector("#totalr").innerText = "£"+Math.floor(total);
 
             localStorage.setItem("totalprice", total);
+            shownavbar()
          }
 
       
@@ -301,6 +221,88 @@ function showTotal() {
       showTotal();
       checkanydata();
    
-      
+      shownavbar()
       
    }
+   shownavbar();
+
+
+   
+   let userCredentials = JSON.parse(localStorage.getItem('userData')) || null;
+            // console.log(userCredentials);
+            
+            let signedUser = document.getElementById('signedUser')
+            let logoutByUser = document.getElementById('logoutByUser');
+            if(userCredentials === null){
+                signedUser.innerHTML = "Sign In"
+                logoutByUser.innerHTML = "Join"
+            }else{
+                signedUser.innerHTML = "Hi"+" "+userCredentials.fname2
+                signedUser.style.textDecoration = "none";
+                signedUser.style.color = "#2D2D2D"
+                signedUser.style.fontWeight = "bold"
+                logoutByUser.innerHTML = "Logout"
+            }
+            let accDrop = document.getElementById('accDrop');
+            let bagDrop =  document.getElementById('bagDrop');
+            
+            function closeMenu(){
+                    accDrop.style.display = "none";
+                    bagDrop.style.display = "none";
+                    window.location.reload();
+                    // document.querySelectorAll('.dropdown .dropdown-content#accDrop')[0].style.display = "none";
+                }   
+        let y=document.getElementById("closebtn")
+        y.addEventListener("click", function(){
+            closeMenu()
+        } )
+        let z=document.getElementById("bagbtn")
+        z.addEventListener("click", function(){
+            closeMenu()
+        } )
+        function shownavbar(){
+         
+         let productdata = JSON.parse(localStorage.getItem('cartdata')) || [];
+         let totalprice = JSON.parse(localStorage.getItem('totalprice'));
+         
+         let cartParentContainer = document.getElementById('cartParentContainer');
+         cartParentContainer.innerHTML = null;
+         if(productdata.length === 0){
+            bagDropContainer.classList.add('bagDropdownEvent')
+         }
+         let cartSubTotal = document.getElementById('cartSubTotal') || null;
+     
+         productdata.forEach(el => {
+            // let cartContainer__product = document.getElementById('cartContainer__product');
+            let cartContainer__product = document.createElement('div');
+            cartContainer__product.classList.add('cartContainer__product');
+            cartContainer__product.setAttribute('id', 'cartContainer__product');
+
+
+             let d1 = document.createElement('div');
+             let img = document.createElement('img');
+             img.src = el.image;
+             d1.append(img);
+             let d2 = document.createElement('div');
+             let p1 = document.createElement('p');
+             p1.innerText = el.price;
+             let p2 = document.createElement('p');
+             p2.innerText = el.details;
+            let d2_0 = document.createElement('div');
+            
+            let p2_0 = document.createElement('p');
+            p2_0.innerText = el.size;
+            let p3_0 = document.createElement('p');
+            p3_0.innerText = el.quantity
+            d2_0.append( p2_0, p3_0)
+            d2.append(p1, p2, d2_0);
+            cartSubTotal.innerText = "£"+Math.floor(totalprice);
+            cartContainer__product.append(d1, d2)
+
+            cartParentContainer.append(cartContainer__product);
+            bagDropContainer.classList.remove('bagDropdownEvent');
+         })
+      
+      
+      }
+

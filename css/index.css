@@ -12,7 +12,7 @@
     margin-bottom: 2px;
 }
 #pink{
-    height:780px;
+    height:850px;
     background-color: #FD6483;
     padding-top: 30px;
 }
@@ -27,14 +27,12 @@
 }
 #wimg{
     display: flex;
-    width: 90%;
+    width: 95%;
     margin: auto;
     margin-bottom: 40px;
 }
 #wimg>img{
-margin-left: 20px;
-margin: auto;
-width: 200px;
+margin-left: 15px;
 }
 #wimg>img:hover{
     transform: scale(1.02);
