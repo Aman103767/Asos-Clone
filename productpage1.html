@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./css/navbar.css">
+<link rel="stylesheet" href="./css/footer.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        body{
+            font-family: sans-serif;
+        }
+        #headerad{
+            /* width: 80%; */
+            /* padding: 20%; */
+            margin: auto;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(235, 235, 235);
+        }
+        #headerad>p{
+            padding-right: 15%;
+            padding-left: 15%;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;   
+            text-align: start;
+         }
+        #categories{
+           display: flex;
+            /* padding-right: 30%; */
+            /* padding-left: 30%; */
+            /* border-color: 1px solid firebrick; */
+            /* border: 1px solid rebeccapurple; */
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #categories>div{
+            margin-left: 20px;
+            background-color: rgb(235, 235, 235);
+            width: 40%;
+            font-size: 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            padding: 5px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom:20px ;
+        }
+
+        /* items body */
+
+        #items{
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+            /* height: 100px; */
+        }
+        #bdiv{
+            /* border: 1px solid gray; */
+            height: 500px;
+            /* background-color: red; */
+        }
+        #bdiv>img{
+            height: 80%;
+            width: 100%;
+        }
+        #bdiv>p{
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        #bdiv>p:nth-child(3){
+            margin-top: 20px;
+            /* color: red; */
+        }
+        #bdiv>button{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        #more {
+            display: none;
+        }
+        #myBtn{
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        #sor{
+            background-color: rgb(235, 235, 235);
+            width: 90%;
+            align-items: center;
+            height: 120px;
+            margin: auto;
+            /* margin-left: 100%; */
+            padding-left: 10%;
+                /* margin-left: 20%; */
+            display: flex;
+        }
+        #sor>#sorting{
+            margin-right:20px ;
+        }
+
+        #sorting1{
+            margin-right: 20px;
+        }
+
+        #sorting,.sortfunc{
+            /* font-weight: bold; */
+            font-size: 20px;
+            width: 200px;
+            height: 50px;
+            border: none;
+            padding-left: 5px;
+           
+
+            border: 1px solid gray;
+           
+            font-family: sans-serif;
+        }
+       
+        option{
+            color: rgb(187, 118, 118);
+            font-size: 20px;
+            /* border-radius:15px 15px 0px 0px ; */
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        #headerad{
+            margin-top: 40px;
+            padding: 20px 0px 0px 0px ;
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="navbar__container"></div>
+    <div id="headerad">
+        <h1>Women's Sale: Tops</h1>
+      
+        <p>From basic slouchy tees to statement Bardot blouses, stock up on the pieces
+             you love with our women’s sale tops collection. Shake up your look with
+              casual, fancy and in-between options from this edit. If you’re after sports 
+              sale T-shirts, whether it’s for fitness or simply to inject your wardrobe
+               with a touch of street style, filter by adidas Originals and discover
+                plain and print options with  <span id="dots">...</span><span id="more">that iconic brand logo. Looking for tanks
+                 or crops for the gym? You’ll find those here, too.
+                 If you’re after
+                  something smarter, shirts and blouses in tailored and unique cuts are
+                   easy to style and work every day. Check out ASOS DESIGN for discounted 
+                   denim shirts, classic button-downs and standout printed pieces that 
+                   are perfect for work, weekend, or whatever. Night out? Switch up your 
+                   look with bodysuits and crops courtesy of Boohoo, or turn to Glamorous
+                    for vacay-ready camis in summer shades and unique textures. From the 
+                    staples to the standouts, discover extraordinary options at 
+                    discounted prices in our tops sale.  </span></p>
+        <button  id="myBtn">Read more</button>
+    </div>
+
+    <div id="categories">
+        <div>FESTIVAL DRESSES</div>
+        <div>FESTIVAL TOPS</div>
+        <div>FESTIVAL FACE + BODY</div>
+        <div>FESTIVAL JACKETS</div>
+        <div>FESTIVAL ACCESSORIES</div>
+    </div>
+
+    <div id="sor">
+
+        <select name="" id="sorting1" class="sortfunc">
+            <option value="">Sort</option>
+            <option value="htl">High to Low</option>
+            <option value="lth">Low to High </option>
+        </select>
+
+        <select name="" id="sorting">
+            <option value="">New in Date</option>
+        </select>
+        <select name="" id="sorting">
+            <option value="">Sale/New Session</option>
+        </select><select name="" id="sorting">
+            <option value="">Style</option>
+        </select><select name="" id="sorting">
+            <option value="">Type</option>
+        </select><select name="" id="sorting">
+            <option value="">Brand</option>
+        </select>
+    </div>
+
+    <div id="items">
+
+    </div>
+    <div id="footer" >
+
+    </div>
+</body>
+</html>
+
+<script type="module">
+ import navbar from "./js/navbar.js"
+
+ document.querySelector(".navbar__container").innerHTML = navbar();
+ import foot from "./js/footer.js"
+ document.getElementById('footer').innerHTML = foot();
+
+document.getElementById("myBtn").addEventListener("click",myFunction);
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+
+// import {append} from "./component/append.js"
+    let productdata = [
+        {
+            details: "ASOS LUXE co-ord satin bardot crop top with bow in floral print",
+            price: "£52.00",
+            image: "https://images.asos-media.com/products/asos-luxe-co-ord-satin-bardot-crop-top-with-bow-in-floral-print/201884267-1-multi?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Daisy Street Y2K strappy butterfly crop top in grunge sequins",
+            price: "£37.00",
+            image: "https://images.asos-media.com/products/daisy-street-y2k-strappy-butterfly-crop-top-in-grunge-sequins/202324648-1-turquoisesequin?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN backless minimal mini dress in white",
+            price: "£40.00",
+            image: "https://images.asos-media.com/products/asos-design-backless-minimal-mini-dress-in-white/202238811-1-white?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Revolution Creator Artist Embellishment Kit",
+            price: "£10.50",
+            image: "https://images.asos-media.com/products/revolution-creator-artist-embellishment-kit/202850162-1-multi?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Reclaimed vintage inspired off shoulder crochet top",
+            price: "£31.99",
+            image: "https://images.asos-media.com/products/reclaimed-vintage-inspired-off-shoulder-crochet-top/202743277-1-beige?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN tiered fringe beach mini dress in sage green",
+            price: "£40.00",
+            image: "https://images.asos-media.com/products/asos-design-tiered-fringe-beach-mini-dress-in-sage-green/201842945-1-sagegreen?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Miss Selfridge retro daisy kickflare co-ord",
+            price: "£18.99",
+            image: "https://images.asos-media.com/products/miss-selfridge-retro-daisy-kickflare-co-ord/201434367-1-multi?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS EDITION feather & sequin mini dress with low back in charcoal",
+            price: "£135.00",
+            image: "https://images.asos-media.com/products/asos-edition-feather-sequin-mini-dress-with-low-back-in-charcoal/20232354-1-charcoal?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Trendyol mesh side dress in black",
+            price: "£29.00",
+            image: "https://images.asos-media.com/products/trendyol-mesh-side-dress-in-black/201644659-1-black?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN textured lace beach trouser co ord in white",
+            price: "£32.00",
+            image: "https://images.asos-media.com/products/asos-design-textured-lace-beach-trouser-co-ord-in-white/201923162-1-white?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN patchwork embellished mini dress with wrap skirt and drape back in textured sequin",
+            price: "£105.00",
+            image: "https://images.asos-media.com/products/asos-design-patchwork-embellished-mini-dress-with-wrap-skirt-and-drape-back-in-textured-sequin/200498723-1-bronze?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN co-ord crochet off shoulder top in cream",
+            price: "£26.00",
+            image: "https://images.asos-media.com/products/asos-design-co-ord-crochet-off-shoulder-top-in-cream/202690907-1-cream?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASYOU mesh layer long sleeve mini dress in black",
+            price: "£28.99",
+            image: "https://images.asos-media.com/products/asyou-mesh-layer-long-sleeve-mini-dress-in-black/202649241-1-black?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Style Cheat tiered smock dress in pink leopard print",
+            price: "£45.00",
+            image: "https://images.asos-media.com/products/style-cheat-tiered-smock-dress-in-pink-leopard-print/202626709-1-pinkanimalprint?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN shard sequin strappy mini dress in orange",
+            price: "£90.00",
+            image: "https://images.asos-media.com/products/asos-design-shard-sequin-strappy-mini-dress-in-orange/201593123-1-orange?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS LUXE co-ord 3D lace bardot crop top in black",
+            price: "£52.00",
+            image: "https://images.asos-media.com/products/asos-luxe-co-ord-3d-lace-bardot-crop-top-in-black/201306340-1-black?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN mesh ruched midi dress with tie in animal and floral print",
+            price: "£34.00",
+            image: "https://images.asos-media.com/products/asos-design-mesh-ruched-midi-dress-with-tie-in-animal-and-floral-print/202023522-1-animalfloralprint?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN one shoulder mesh beach midi dress in blue swirl",
+            price: "£30.00",
+            image: "https://images.asos-media.com/products/asos-design-one-shoulder-mesh-beach-midi-dress-in-blue-swirl/202631303-1-blueswirl?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN neon trim mesh set in beige and neon",
+            price: "£22.00",
+            image: "https://images.asos-media.com/products/i-saw-it-first-polka-dot-smock-dress-in-monochrome/200914580-1-multi?$n_240w$&wid=168&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN neon trim mesh soft bra in beige and neon",
+            price: "£14.00",
+            image: "https://images.asos-media.com/products/asos-design-soft-denim-ruffle-sleeve-babydoll-dress-in-washed-black/201610023-1-washedblack?$n_240w$&wid=168&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN recycled blend mesh cowl neck cami top in black",
+            price: "£12.50",
+            image: "https://images.asos-media.com/products/asos-design-recycled-blend-mesh-cowl-neck-cami-top-in-black/202818223-1-black?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Tammy Girl Y2K mini skirt in brown with pink lace hem",
+            price: "£30.00",
+            image: "https://images.asos-media.com/products/tammy-girl-y2k-mini-skirt-in-brown-with-pink-lace-hem/202719860-1-brown?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN 90s sequinned cowl slip midi dress with asymmetrical hem in pink",
+            price: "£40.00",
+            image: "https://images.asos-media.com/products/asos-design-90s-sequinned-cowl-slip-midi-dress-with-asymmetrical-hem-in-pink/202115192-1-pink?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASYOU diamante trim cut out co-ord in blue",
+            price: "£59.98",
+            image: "https://images.asos-media.com/groups/asyou-diamante-trim-cut-out-co-ord-in-blue/85923-group-1?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASYOU festival diamante trim bralet in blue",
+            price: "£24.99",
+            image: "https://images.asos-media.com/products/asyou-festival-diamante-trim-bralet-in-blue/203058742-1-aqua?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN open back midi tea dress in tie dye",
+            price: "£42.00",
+            image: "https://images.asos-media.com/products/asos-design-open-back-midi-tea-dress-in-tie-dye/201841723-1-tiedyeprint?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Saint Genies pearl embellished blazer dress in blush",
+            price: "£42.00",
+            image: "https://images.asos-media.com/products/saint-genies-pearl-embellished-blazer-dress-in-blush/13706487-1-blush?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Style Cheat sequin halter midi dress in rose gold",
+            price: "£60.00",
+            image: "https://images.asos-media.com/products/style-cheat-sequin-halter-midi-dress-in-rose-gold/201402720-1-rosegold?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN Tall high neck disc sequin midi dress in purple",
+            price: "£125.00",
+            image: "https://images.asos-media.com/products/asos-design-tall-high-neck-disc-sequin-midi-dress-in-purple/202018077-1-purple?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN cowl bandeau fringed mini dress in gold",
+            price: "£36.00",
+            image: "https://images.asos-media.com/products/asos-design-cowl-bandeau-fringed-mini-dress-in-gold/200859486-1-gold?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Topshop frill ruffle bardot mini dress in natural animal",
+            price: "£50.00",
+            image: "https://images.asos-media.com/products/topshop-frill-ruffle-bardot-mini-dress-in-natural-animal/201700779-1-multi?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Miss Selfridge disk sequin embellished mini dress in green",
+            price: "£98.99",
+            image: "https://images.asos-media.com/products/miss-selfridge-disk-sequin-embellished-mini-dress-in-green/201651391-1-palegreen?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "The North Face t-shirt dress in lilac tie dye Exclusive at ASOS",
+            price: "£40.00",
+            image: "https://images.asos-media.com/products/the-north-face-t-shirt-dress-in-lilac-tie-dye-exclusive-at-asos/202391909-1-lilac?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS EDITION high neck crop top with cap sleeve in 3d floral lace in ivory",
+            price: "£85.00",
+            image: "https://images.asos-media.com/products/asos-edition-high-neck-crop-top-with-cap-sleeve-in-3d-floral-lace-in-ivory/200748441-1-ivory?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "In Your Dreams Gold Theona Gold Eye Stickers",
+            price: "£7.50",
+            image: "https://images.asos-media.com/products/influence-shirt-dress-with-contrast-collar-in-black-gingham/23897611-1-blackwhite?$n_240w$&wid=168&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN satin keyhole halter top in zebra print co-ord",
+            price: "£30.00",
+            image: "https://images.asos-media.com/products/asos-design-satin-keyhole-halter-top-in-zebra-print-co-ord/201951915-1-zebraprint?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN mesh blouson sleeve mini dress with ruching in green and purple floral",
+            price: "£36.00",
+            image: "https://images.asos-media.com/products/asos-design-mesh-blouson-sleeve-mini-dress-with-ruching-in-green-and-purple-floral/201658029-1-floralprint?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "Vila fluffy mini dress in bright pink",
+            price: "£45.00",
+            image: "https://images.asos-media.com/products/vila-fluffy-mini-dress-in-bright-pink/202775021-1-brightpink?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN mini satin slip skirt in animal print",
+            price: "£22.00",
+            image: "https://images.asos-media.com/products/asos-design-mini-satin-slip-skirt-in-animal-print/22155332-1-multi?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASYOU distressed knitted top co-ord in multi",
+            price: "£19.99",
+            image: "https://images.asos-media.com/products/asyou-distressed-knitted-top-co-ord-in-multi/201747196-1-multi?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN beaded grab bag in multi swirl print",
+            price: "£30.00",
+            image: "https://images.asos-media.com/products/asos-design-beaded-grab-bag-in-multi-swirl-print/201698389-1-multi?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS EDITION applique floral wedding cape in ivory",
+            price: "£125.00",
+            image: "https://images.asos-media.com/products/asos-edition-applique-floral-wedding-cape-in-ivory/201100699-1-ivory?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN wide leg disco pant with puddle hem in black",
+            price: "£32.00",
+            image: "https://images.asos-media.com/products/asos-design-wide-leg-disco-pant-with-puddle-hem-in-black/201100960-1-black?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        },
+        {
+            details: "ASOS DESIGN minimal cargo trousers in stone with contrast stitch",
+            price: "£34.00",
+            image: "https://images.asos-media.com/products/asos-design-minimal-cargo-trousers-in-stone-with-contrast-stitch/201924796-1-stone?$n_480w$&wid=476&fit=constrain",
+            quantity: 1
+        }
+]
+
+
+append(productdata)
+        function append(){
+            document.getElementById("items").innerHTML = null;
+                productdata.forEach(function(el){
+                    // console.log(el)
+
+                    var div = document.createElement("div");
+                    div.setAttribute("id","bdiv")
+                    div.addEventListener("click",function(){
+                        cartfunc(el)
+                    })
+                    var img = document.createElement("img");
+                    img.src = el.image;
+                    
+                    var detail = document.createElement("p")
+                    // detail.setAttribute("id","detail")
+                    
+                    detail.innerText = el.details;
+                    var price = document.createElement("p")
+                    // .setAttribute("id","detail")
+
+                    price.innerText = el.price;
+                    
+                    div.append(img,detail,price)
+
+                    document.getElementById("items").append(div)
+                })
+        }
+        // var cartarr = {};
+        function cartfunc(el){
+           var cartobj = {
+                data:el
+           }
+           localStorage.setItem("cartitem",JSON.stringify(cartobj.data))
+
+           window.location.href = "./addcart.html"
+        }
+        
+      
+       
+document.getElementById("sorting1").addEventListener("change",sortinng)
+
+
+
+       function sortinng(){
+        let selected = document.getElementById("sorting1").value;
+console.log(selected,"value")
+      
+        if(selected == "htl"){
+        
+         productdata.sort(function(a,b){
+            let  x = a.price;
+        x = +x.substr(1);
+        let y = b.price;
+        y = +y.substr(1);
+             return y-x;
+         })
+         append(productdata)
+
+        }else if(selected =="lth"){
+            productdata.sort(function(a,b){
+                let  x = a.price;
+        x = +x.substr(1);
+        let y = b.price;
+        y = +y.substr(1);
+             return x-y;
+         })
+         append(productdata)
+        }
+       }
+
+
+       
+let userCredentials = JSON.parse(localStorage.getItem('userData')) || null;
+            // console.log(userCredentials);
+            
+            let signedUser = document.getElementById('signedUser')
+            let logoutByUser = document.getElementById('logoutByUser');
+            if(userCredentials === null){
+                signedUser.innerHTML = "Sign In"
+                logoutByUser.innerHTML = "Join"
+            }else{
+                signedUser.innerHTML = "Hi"+" "+userCredentials.fname2
+                signedUser.style.textDecoration = "none";
+                signedUser.style.color = "#2D2D2D"
+                signedUser.style.fontWeight = "bold"
+                logoutByUser.innerHTML = "Logout"
+            }
+            let accDrop = document.getElementById('accDrop');
+            let bagDrop =  document.getElementById('bagDrop');
+            
+            function closeMenu(){
+                    accDrop.style.display = "none";
+                    bagDrop.style.display = "none";
+                    window.location.reload();
+                    // document.querySelectorAll('.dropdown .dropdown-content#accDrop')[0].style.display = "none";
+                }   
+        let y1=document.getElementById("closebtn")
+        y1.addEventListener("click", function(){
+            closeMenu()
+        } )
+        let z=document.getElementById("bagbtn")
+        z.addEventListener("click", function(){
+            closeMenu()
+        } )
+
+        function shownavbar(){
+         
+         let productdata = JSON.parse(localStorage.getItem('cartdata')) || [];
+         let totalprice = JSON.parse(localStorage.getItem('totalprice'));
+         
+         let cartParentContainer = document.getElementById('cartParentContainer');
+         cartParentContainer.innerHTML = null;
+         if(productdata.length === 0){
+            bagDropContainer.classList.add('bagDropdownEvent')
+         }
+         let cartSubTotal = document.getElementById('cartSubTotal') || null;
+     
+         productdata.forEach(el => {
+            // let cartContainer__product = document.getElementById('cartContainer__product');
+            let cartContainer__product = document.createElement('div');
+            cartContainer__product.classList.add('cartContainer__product');
+            cartContainer__product.setAttribute('id', 'cartContainer__product');
+
+
+             let d1 = document.createElement('div');
+             let img = document.createElement('img');
+             img.src = el.image;
+             d1.append(img);
+             let d2 = document.createElement('div');
+             let p1 = document.createElement('p');
+             p1.innerText = el.price;
+             let p2 = document.createElement('p');
+             p2.innerText = el.details;
+            let d2_0 = document.createElement('div');
+            
+            let p2_0 = document.createElement('p');
+            p2_0.innerText = el.size;
+            let p3_0 = document.createElement('p');
+            p3_0.innerText = el.quantity
+            d2_0.append( p2_0, p3_0)
+            d2.append(p1, p2, d2_0);
+            cartSubTotal.innerText = "£"+Math.floor(totalprice);
+            cartContainer__product.append(d1, d2)
+
+            cartParentContainer.append(cartContainer__product);
+            bagDropContainer.classList.remove('bagDropdownEvent');
+         })
+      
+      
+      }
+
+</script>
