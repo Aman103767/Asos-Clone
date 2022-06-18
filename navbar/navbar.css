@@ -1,0 +1,957 @@
+*{
+
+   font-family: sans-serif; 
+   
+
+}
+
+.topbar__country{
+    padding: 0 70px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #F8F8F8;
+  height: 30px;
+  align-items: center;  
+   
+}
+.topbar__country > a{
+    border-left: 1px solid #DDDDDD;
+    padding: 5px 18px;
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+ 
+    /* make changes */
+     height: 20px;
+    display: flex;
+    align-items: center; 
+    
+}
+
+.topbar__country > a:hover{
+   color: #086FCE;
+   cursor: pointer;
+}
+
+.topbar__country > a >ul {
+    list-style-type: none;
+}
+.topbar__country > a:nth-child(3){
+    border-right: 1px solid #DDDDDD;
+/* make changes */
+    height: 20px;
+    display: flex;
+    align-items: center;
+
+}
+.topbar__country > a:nth-child(3) > ul > li > img{
+    height: 16px;
+    width: 16px;
+}
+.topbar__country > a:nth-child(3) > ul > li > img:hover{
+    border: 1px solid #086FCE;
+    border-radius: 50%;
+    cursor: pointer;
+
+} 
+
+/* Mid Navbar Start */
+
+.navbar__mid{
+    display: flex;
+    padding: 0 25px 0 25px;
+    background-color: #2D2D2D
+}
+
+.navbar__mid > div {
+    display: flex;
+}
+
+.navbar__mid > div:first-child > a:first-child{
+    padding: 15px 25px 10px 45px;
+}
+.navbar__mid > div:first-child > a{
+    padding: 20px 30px;
+    /* border: 1px solid #FFFFFF; */
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.navbar__mid > div:first-child > a:nth-child(2){
+    background-color: #525050;
+}
+/*  */
+
+.navbar__mid > div:nth-child(2){
+    /* flex: 1; */
+    padding: 10px 25px;
+
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.navbar__mid > div:nth-child(2) > input{
+    height: 40px;
+    width: 790px;
+    padding: 10px 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+.search-icon{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 32%;
+    right: 5%;
+ 
+}
+
+
+
+/*  */
+
+.navbar__mid > div:nth-child(3){
+    display: flex;
+} 
+
+
+    
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /* border: 1px solid red; */
+  
+}
+.mid__drop--btn{
+    font-size: 16px;
+    color: #333333;
+    padding: 16px;
+}
+
+.dropbtn {
+    /* background-color: #4CAF50; */
+    
+    
+    border: none;
+    cursor: pointer;
+    background: none;
+    /* padding: 10px; */
+    }
+
+
+.dropbtn > svg{
+    height: 20px;
+    width: 20px;
+}
+
+.drop__mid__width{
+    min-width: 325px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9 ; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all 0.3s ease-in;
+    right: 0;
+  
+
+}
+.bagDropdownEvent{
+    pointer-events: none;
+}
+/* .dropdown-content a:hover {background-color: #f1f1f1} */
+
+.dropdown:hover .dropdown-content {
+display: block;
+transition: all 2s ease-in;
+}
+.vl{
+    border-left: 1.5px solid #666;
+    height: 18px;
+}
+.account__drop{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #EEEEEE;
+}
+.account__drop > div{
+    display: flex;
+}
+.account__drop > div > a{
+    color: #666;
+    padding: 0 10px;
+    font-size: 16px;
+    /* border: 1px solid red; */
+}
+.account__drop > div > a:hover{
+    color: #086FCE;
+}
+.account__drop button{
+    border: none;
+    cursor: pointer;
+    background: none;
+    
+}
+
+.account__orders{
+    display: flex;
+    flex-direction: column;
+}
+
+.account__orders > div{
+    padding: 18px 25px;
+    /* border: 1px solid red; */
+}
+
+.account__orders > div > a{
+    text-decoration: none;
+    color: #000000;
+}
+.account__orders > div > a:hover{
+    color: #086FCE;
+    text-decoration: none;
+    background: none;
+}
+.account__orders > div > a:hover > svg{
+    fill: #086FCE;
+}
+.account__orders > div > a > svg{
+    float: left;
+}
+.account__orders > div > a > span{
+    padding:  0 10px;
+    float: left;
+}
+
+.cartContainer__product{
+    display: flex;
+    padding: 15px;
+    
+  
+    /* border: 1px solid red; */
+}
+
+
+.cartContainer__product > div:first-child{
+    flex: 1;
+}
+
+.cartContainer__product > div:nth-child(2){
+    flex: 2;
+    padding: 10px 5px 0 10px;
+    
+}
+.cartContainer__product > div:nth-child(2) > p:first-child{
+    color: #2d2d2d;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.cartContainer__product > div:nth-child(2) > p:nth-child(2){
+    margin: 7px 0 0 0;
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+}
+
+.cartContainer__product > div:nth-child(2) > div{
+    display: flex;
+    /* margin: 4px 0 0 0; */
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    /* border: 1px solid red; */
+    padding: 5px 5px 5px 0;
+
+    justify-content: space-between;
+
+}
+
+.cartContainer__product > div:first-child > img{
+    width: 100%;
+    height: 100px;
+}
+.cartTotal{
+    display: flex;
+    padding: 15px;
+    /* border: 1px solid red; */
+    color: #2d2d2d;
+    font-size: 14px;
+    justify-content: space-between;
+    background-color: #F8F8F8;
+}
+.bagCheckout{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px;
+    background-color: #EEEEEE;
+
+}
+
+.bagCheckout > a{
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.bagCheckout > a:first-child{
+    border: 2px solid #DDDDDD;
+    background-color: #FFFFFF;
+    color: #2d2d2d;
+}
+.bagCheckout > a:first-child:hover{
+    background-color: #EEEEEE;
+}
+
+.bagCheckout > a:nth-child(2){
+    background-color: #018849;
+    color: #FFFFFF;
+}
+.bagCheckout > a:nth-child(2):hover{
+    background-color: #006636;
+}
+
+.bagInfo{
+    text-align: center;
+    background-color: #EEEEEE;
+    color: #2d2d2d;
+    padding: 20px;
+}
+.bagInfo > p:first-child{
+    font-size: 16px;
+
+}
+
+.bagInfo > p:nth-child(2){
+    font-size: 12px;
+    margin: 5px 0 0 0;
+}
+.myBagHeader{
+    font-weight: 900;
+    color: #2d2d2d;
+}
+
+/* Cart DropDown Section */
+
+
+
+
+.navbar__bot{
+
+    display: flex;
+    padding: 0 40px;
+    font-size: 14px;
+    background-color: #525050;
+    
+}
+.navbar__bot .dropdown button:hover{
+    background-color: #EEEEEE;
+    color: #2D2D2D;
+}
+
+.bot__drop--btn{
+    padding: 16px 12px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.navbar__bot--skewedItem{
+    transform : skew(-12deg);
+    background-color: #d01345;
+}
+
+.navbar__bot--skewedItemText{
+    display: inline-block;
+    transform : skew(12deg) !important;
+    font-weight: bold;
+}
+
+.navbar__bot__listContainer{
+    display: flex;
+    padding: 20px 20px 20px 5px;
+    justify-content: space-between;
+}
+
+.drop__bot__width{
+    min-width: 1200px;
+}
+
+
+.navbar__bot__listContainer > div > h4:first-child{
+   padding: 0 0 1px 0;
+   display: inline-block;
+   margin: 0 0 15px 0;
+   border-bottom: 1px solid black;
+}   
+
+.navbar__bot__listContainer > div > a{
+    text-decoration: none;
+    background-color: transparent;
+    display: block;
+    color: #666;
+    font-size: 13px;
+}
+
+
+
+.navbar__bot__listContainer > div > a:hover{
+    color: #086FCE;
+}
+
+.sale {
+    padding: 7px 0;
+}
+.sale__Headers{
+    padding: 0 0 0 20px;
+    width: 269px;
+    /* border: 1px solid red; */
+}
+.sale__noHeaders{
+    padding: 31px 0 0 20px;
+    width: 269px;
+}
+.separator--right{
+    border-right: 1px solid #DDDDDD;
+}
+
+.separator--left{
+    border-left: 1px solid #DDDDDD;
+}
+
+.shop__by__bodyFit{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 20px 20px 20px; */
+}
+.shop__by__bodyFit > a{
+    width: 120px;
+    text-decoration: none;
+    padding: 0 10px;
+    text-align: center;
+
+}
+.shop__by__bodyFit > a > div{
+    padding: 1px;
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.shop__by__bodyFit > a > div >img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    
+}
+
+.shop__by__bodyFit > a > p{
+    font-size: 13px;
+    color: rgb(102, 102, 102);
+    padding: 5px 0;
+}
+
+.shop__by__bodyFit > a:hover{
+    color: #086FCE;
+}
+
+.shop__by__bodyFit > a > div:hover {
+    border: 1px solid #086FCE;
+}
+
+
+
+.navbar__bot  div:nth-child(2)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-8%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(3)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-15%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(4)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-20%, 0)!important;
+   /* border: 1px solid red; */
+}
+
+.navbar__bot  div:nth-child(5)  .dropdown-content{
+     left: 50%!important; 
+    right: auto!important; 
+    transform: translate(-26%, 0)!important;
+    /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(6)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-33%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(7)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-41%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(8)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-48%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(9)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-56%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(10)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-64%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(11)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-71%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(12)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-78%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(13)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-84%, 0)!important;
+   /* border: 1px solid red; */
+}
+.navbar__bot  div:nth-child(14)  .dropdown-content{
+    left: 50%!important; 
+   right: auto!important; 
+   transform: translate(-91%, 0)!important;
+   /* border: 1px solid red; */
+}
+
+
+
+
+
+
+
+.shop__by__newEdit__container{
+
+    padding: 0 0 0 20px;
+    width: 578px;
+    /* border: 1px solid red; */
+
+}
+
+.shop__by__newEdit{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop__by__newEdit > a {
+    
+    display: block;
+    height: 313px;
+    width: 270px;
+    padding: 1px;
+    border: 1px solid #DDDDDD;
+}
+
+.shop__by__newEdit > a:hover{
+    border: 1px solid #086FCE;
+}
+
+.shop__by__newEdit > a > div{
+   
+    height: 100%;
+    width: 100%;
+}
+.shop__by__newEdit > a > div > img{
+    height: 100%;
+    width: 100%;
+    
+}
+.imageGrad1{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_asos_design_festigal_1650x1884?&$n_320w$") top no-repeat ;
+    /* background-image: linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)); */
+}
+.imageGrad2{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_asos_edition_1650x1884_june?&$n_320w$") top no-repeat ;
+}
+
+.imageGrad3{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_heels_1650x1884?&$n_320w$" ) top no-repeat ;
+}
+
+.imageGrad4{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_asos_trip_footwear_1650x1884?&$n_320w$" ) top no-repeat ;
+}
+
+.imageGrad5{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_accessories_springedit_2wl_1904574?&$n_320w$" ) top no-repeat ;
+}
+
+.imageGrad6{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_gbl_accessories_shoulderbags_2wl_106178936?&$n_320w$" ) top no-repeat ;
+}
+
+
+
+
+
+.shop__by__newEdit > a > div span{
+    position: absolute;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #2D2D2D;
+    top: 84%;
+}
+
+.shop__by__newEdit--textLeft{
+    left: 16%;
+}
+
+.shop__by__newEdit--textRight{
+    left: 64%;
+}
+
+
+/*  */
+
+.shop__by__colorContainer{
+    padding: 0 0 0 20px;
+    width: 269px;
+    /* border: 1px solid red; */
+}
+.shop__by__colorContainer > div:nth-child(n+1){
+    margin: 10px 0 0 0;
+}
+.shop__by__color{
+    display: flex;
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+.shop__by__color:hover p{
+    color: #086FCE;
+}
+
+.shop__by__color > div:first-child{
+    /* float: left; */
+    padding: 2px;
+    border-radius: 50%;
+    border: 1px solid #DDDDDD;
+    width: 40px;
+    height: 40px;
+}
+.shop__by__color:hover > div:first-child{
+    border: 1px solid #086FCE;
+}
+
+.shop__by__color > div:first-child > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.shop__by__color > div:nth-child(2){
+    /* float: left; */
+    padding: 12px 0 16px 0;
+    margin: 0 0 0 10px;
+    width: 130px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.shop__by__colorContainer > div:last-child > .shop__by__color > div:last-child{
+    border-bottom: 1px solid #FFFFFF ;
+}
+
+.adidasShop--container{
+    padding: 0 0 0 20px;
+    width: 269px;
+    /* border: 1px solid red; */
+}
+.adidasShop--container > div:nth-child(n+2){
+    margin: 12px 0 0 0;
+}
+
+.adidasShop{
+    position: relative;
+    width: 230px;
+    height: 100px;
+    border: 1px solid #DDDDDD;
+}
+
+.adidasShop:hover{
+    border: 1px solid #086FCE; 
+}
+.adidasShop > a{
+    text-decoration: none;
+    color: #2D2D2D;
+}
+
+.adidasShop > a > img{
+    height: 100%;
+    width: 100%;
+}
+
+.adidasShop > a > span{
+    position: absolute;
+    font-size: 15px;
+    font-weight: 900;      
+    left: 5%;
+}
+
+.adidasText1{
+    top: 20%;
+}
+
+.adidasText2{
+    top: 40%;
+}
+
+
+.shopFestival--container{
+    padding: 0 0 0 20px;
+    width: 269px;
+}
+
+.shopFestival{
+    position: relative;
+    height: 313px;
+    width: 250px;
+    padding: 1px;
+    border: 1px solid #DDDDDD;
+}
+.shopFestival:hover{
+    border: 1px solid #086FCE;
+}
+.shopFestival > a{
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #2D2D2D;
+}
+
+.shopFestival > a > span{
+    position: absolute;
+    color: #2D2D2D;
+    font-size: 16px;
+    font-weight: bold;
+    top: 85%;
+    left: 32%;
+}
+
+
+.shopFestival > a > img{
+    width: 100%;
+    height: 100%;
+}
+
+.imageGrad7{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_festigal_bodycon_dresses_1650x1884?&$n_320w$" ) top no-repeat ;
+}
+
+.shopSummer{
+    height: 120px !important;
+}
+
+.imageGrad8{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_dontforgettopack_1650x876_270522?&$n_320w$" ) top no-repeat ;
+}
+
+.imageGrad9{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_gbl_asos_trip_head_to_toe_swim_1650x876?&$n_320w$" ) top no-repeat ;
+}
+
+.shopSummer--text1{
+    text-align: center;
+    left: 20% !important;
+    top: 60% !important;
+}
+
+.shopSummer--text2{
+    text-align: center;
+    left: 25% !important;
+    top: 70% !important;
+}
+
+
+
+.shopTrendingNow--text1{
+    text-align: center;
+    left: 25% !important;
+    top: 60% !important;
+}
+
+.shopTrendingNow--text2{
+    text-align: center;
+    left: 25% !important;
+    top: 60% !important;
+}
+
+.imageGrad10{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_asos_luxe_us_1650x876_220222?&$n_320w$" ) top no-repeat ;
+}
+
+.imageGrad11{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_musthaves_global_1680x876?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad12{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_gbl_trendingnow_pastels_3wl_114899624?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad13{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_pirate_party_1650x876?&$n_320w$" ) top no-repeat ;
+}
+
+.topShopPad{
+    padding: 31px 0 0 0;
+}
+
+.topShop--text1{
+    text-align: center;
+    left: 25% !important;
+    top: 60% !important;
+}
+
+.topShop--text2{
+    text-align: center;
+    left: 35% !important;
+    top: 60% !important;
+}
+
+.imageGrad14{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/topshop_discover_1680x876_june?&$n_320w$" ) top no-repeat ;
+}
+
+.imageGrad15{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/topshop_dresses_1680x876_june?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad16{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_30promo_680x876_261021?&$n_320w$" ) top no-repeat ;
+}
+
+.imageGrad17{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/topshop_denim_1680x876_june?&$n_320w$" ) top no-repeat ;
+}
+
+.imageGrad18{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_huda_1680x876_230421?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad19{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/oap_1680x876_070222?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad20{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/faceandbody_theordinary_1680x876_290322?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad21{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/mac_3wl_271021?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad22{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_gbl_brands_asosbrands_3wl_115079997?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad23{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_gbl_brands_collusion_3wl_114629015?&$n_320w$" ) top no-repeat ;
+}
+
+
+
+.imageGrad24{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_gbl_brands_curve_3wl_115980273?&$n_320w$" ) top no-repeat ;
+}
+
+
+.imageGrad25{
+    background : linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8)), url("https://images.asos-media.com/navigation/ww_gbl_brands_designerbrands_3wl_108958417?&$n_320w$" ) top no-repeat ;
+}
+
+.shopBrands__text1{
+    text-align: center;
+    left: 20% !important;
+    top: 60% !important;
+}
+
+.marketPlace{
+    position: relative;
+    height: 200px;
+    width: 280px;
+    background-color: #FFFFFF;
+    /* border: 1px solid red; */
+}
+
+.marketPlace > a > img{
+    width: 100%;
+}
+
+.marketPlace > a:hover > span{
+    color: #086FCE;
+}
+
+.marketPlace > a > span{
+    display: inline-block;
+    color: #2d2d2d;
+    font-size: 16px;
+    padding: 0 0 0 20px;
+    margin: 10px 0 0 0;
+}
+
+.marketPlace h2{
+    position: absolute;
+    color: #FFFFFF;
+    top: 45%;
+    left: 7%;
+}
+
+.marketPlace__container{
+    background-color: #EEEEEE;
+    padding-bottom:  50px !important;
+    padding-top: 25px !important;
+    padding-left: 20px !important;
+}
+
+.shopFourbyFourPadding{
+    padding-left: 60px !important;
+    padding-right: 60px !important;  
+}
+
+.textRed{
+    color: rgb(209, 19, 68) !important;
+}
