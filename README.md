@@ -1,7 +1,7 @@
 # Clone of asos.com
 asos.com website was our project for Unit-3 Construct week at Masai School.
 We have made this project in 5 days.<br />
-***Our clone asos website - (https://elegant-rolypoly-f5f2d4.netlify.app/index.html)***
+***Our clone asos website - (https://relaxed-starship-4fb21b.netlify.app/)***
 
 # Tech Stack
 -HTML
