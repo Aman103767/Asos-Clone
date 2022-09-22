@@ -35,7 +35,7 @@ We have made this project in 5 days.<br />
 -Aman Sharma
 -Adarsh Khatri
 -Shashank Sinha
--Manoj Tryambak Gajare
+-Manoj  Gajare
 -Radhe Shyam Soni
 -Pallavi Arvind Bobale
 
