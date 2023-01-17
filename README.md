@@ -1,7 +1,7 @@
 # Clone of asos.com
 Asos is one of the leading fashion product brands and we
 made a clone of its online retail platform. This was a group
-project completed by a team of 5 members in 5 days.
+project completed by a team of 6 members in 5 days.
 
 # Tech Stack
 - HTML
